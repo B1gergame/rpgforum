@@ -60,6 +60,11 @@ RPG Forum — веб‑платформа для обсуждения ролев
 
 При запуске тестов заглушка Vite‑манифеста создаётся автоматически: скрипт `tests/bootstrap.php` генерирует файл `public/build/manifest.json` с фиктивными путями к ассетам, чтобы Blade‑шаблоны не падали в тестовой среде.
 
+## SPA-авторизация
+
+Для авторизации SPA используется Laravel Sanctum и сессионные cookie. См. [документацию](docs/sanctum-spa-auth.md) для настройки CORS, CSRF и примеров запросов.
+
+
 ## Системные акторы
 
 Миграция `create_actors_core` добавляет таблицы `actors`, `actor_memberships` и `scene_actors`, а также поля `actor_id` и `posted_by_user_id` в таблицу `posts`.
