@@ -1,30 +1,44 @@
+# --- Пакеты и сборки
 /vendor/
-node_modules/
-npm-debug.log
-yarn-error.log
+/node_modules/
+/public/build
+/public/hot
+/public/storage
+/bootstrap/ssr
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+# --- Laravel 4
+/bootstrap/compiled.php
+/app/storage/
 
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
-
-# Laravel 5 & Lumen specific with changed public path
+# --- Laravel 5 & Lumen (альтернативный public path)
 public_html/storage
 public_html/hot
 
-storage/*.key
+# --- Конфиденциальные и средовые файлы
 .env
+.env.backup
+.env.production
+auth.json
+.phpactor.json
+
+# --- Storage и служебные артефакты
+/storage/*.key
+/storage/pail
+
+# --- Инструменты разработки / локальные окружения
 Homestead.yaml
 Homestead.json
 /.vagrant
-.phpunit.result.cache
 
-/public/build
-/storage/pail
-.env.backup
-.env.production
-.phpactor.json
-auth.json
+# --- PHPUnit и кеши
+/.phpunit.result.cache
+/.phpunit.cache
+/npm-debug.log
+/yarn-error.log
+
+# --- IDE/Editor
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
