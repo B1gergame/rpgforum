@@ -105,6 +105,8 @@ return [
         ),
     ],
 
+    'neutral_actor_name' => env('APP_NEUTRAL_ACTOR_NAME', 'Нейтральный персонаж'),
+
     /*
     |--------------------------------------------------------------------------
     | Maintenance Mode Driver
