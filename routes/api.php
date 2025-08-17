@@ -10,3 +10,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::patch('/scenes/{scene}/actors/{actor}', [SceneActorsController::class, 'update']);
     Route::delete('/scenes/{scene}/actors/{actor}', [SceneActorsController::class, 'detach']);
 });
+
+Route::middleware(['auth:sanctum', 'throttle:posts'])->group(function () {
+    Route::post('/posts', 'App\\Http\\Controllers\\Api\\PostController@store')->name('api.posts.store');
+});
+
