@@ -58,6 +58,8 @@ RPG Forum — веб‑платформа для обсуждения ролев
 - `npm run build` — production‑сборка фронтенда.
 - `npm run dev` — дев‑сервер Vite.
 
+При запуске тестов заглушка Vite‑манифеста создаётся автоматически: скрипт `tests/bootstrap.php` генерирует файл `public/build/manifest.json` с фиктивными путями к ассетам, чтобы Blade‑шаблоны не падали в тестовой среде.
+
 ## Системные акторы
 
 Миграция `create_actors_core` добавляет таблицы `actors`, `actor_memberships` и `scene_actors`, а также поля `actor_id` и `posted_by_user_id` в таблицу `posts`.
