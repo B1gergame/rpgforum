@@ -36,7 +36,11 @@ RPG Forum — веб‑платформа для обсуждения ролев
    ```bash
    php artisan migrate
    ```
-4. Запустить dev‑серверы:
+4. Засеять системных акторов:
+   ```bash
+   php artisan db:seed --class=ActorSystemSeeder
+   ```
+5. Запустить dev‑серверы:
    ```bash
    composer dev         # сервер Laravel, очередь и Vite
    # или отдельно
@@ -53,4 +57,12 @@ RPG Forum — веб‑платформа для обсуждения ролев
 - `npm run format:check` — проверка форматирования.
 - `npm run build` — production‑сборка фронтенда.
 - `npm run dev` — дев‑сервер Vite.
+
+## Системные акторы
+
+Миграция `create_actors_core` добавляет таблицы `actors`, `actor_memberships` и `scene_actors`, а также поля `actor_id` и `posted_by_user_id` в таблицу `posts`.
+
+Для создания записей `Narrator`, `Dice`, `ModBot` и «Нейтрального персонажа» выполните сидер `ActorSystemSeeder` (см. шаг развертывания выше).
+
+Имя нейтрального персонажа можно переопределить переменной окружения `APP_NEUTRAL_ACTOR_NAME`.
 
